@@ -30,12 +30,12 @@
   ],
   "exports": {
     ".": {
-      "types": "public-api.d.ts",
-      "default": "public-api.mjs"
+      "types": "./public-api.d.ts",
+      "default": "./public-api.mjs"
     }
   },
-  "main": "public-api.mjs",
-  "types": "public-api.d.ts",
+  "main": "./public-api.mjs",
+  "types": "./public-api.d.ts",
   "repository": {
     "type": "git",
     "url": "https://github.com/OGS-GmbH/markdown"
@@ -43,9 +43,13 @@
   "type": "module",
   "scripts": {
     "ci:build:main:production": "node .esbuild/build.mjs",
+    "ci:docs:extract:typedoc": "typedoc && bash ./prepare-typedoc.sh",
+    "ci:docs:main:vitepress": "vitepress build .vitepress",
     "ci:pr:commitlint:main:commitlint": "commitlint",
     "ci:pr:lint:main:eslint": "eslint .",
-    "prepare": "husky"
+    "prepare": "husky",
+    "vitepress": "vitepress dev .vitepress",
+    "vitepress:preview": "vitepress preview .vitepress"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.8.1",
@@ -73,7 +77,11 @@
     "esbuild-plugin-file-path-extensions": "^2.1.4",
     "esbuild-plugin-package-json": "^2.0.0",
     "fast-glob": "^3.3.3",
-    "typescript": "^5.9.3"
+    "typescript": "^5.9.3",
+    "typedoc": "^0.28.14",
+    "typedoc-plugin-markdown": "^4.9.0",
+    "vitepress": "^1",
+    "vitepress-plugin-group-icons": "^1.6.5"
   },
   "sideEffects": false,
   "publishConfig": {

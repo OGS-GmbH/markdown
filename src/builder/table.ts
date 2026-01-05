@@ -56,18 +56,20 @@ type RowNode = Node & {
 const TABLE_SEP: string = "|";
 
 function tableRow (
-  ...nodes: CellNode[]
+  ...nodes: Array<CellNode | null>
 ): RowNode {
+  const filteredNodes: CellNode[] = nodes.filter((node: CellNode | null): node is CellNode => node !== null);
+
   return {
     toString (): string {
-      return `${ TABLE_SEP } ${ nodes.join(` ${ TABLE_SEP } `) } ${ TABLE_SEP }`;
+      return `${ TABLE_SEP } ${ filteredNodes.join(` ${ TABLE_SEP } `) } ${ TABLE_SEP }`;
     },
     cellAt (index: number): CellNode | undefined {
-      return nodes.at(index);
+      return filteredNodes[ index ];
     },
-    cells: nodes,
+    cells: filteredNodes,
     addCell (node: CellNode): void {
-      nodes.push(node);
+      filteredNodes.push(node);
     }
   };
 }
@@ -119,25 +121,27 @@ function getBorderCellValueByAlign (length: number, align: Align): string {
 }
 
 function table (
-  ...rows: RowNode[]
+  ...rows: Array<RowNode | null>
 ): Node {
+  const filteredRows: RowNode[] = rows.filter((row: RowNode | null): row is RowNode => row !== null);
+
   return {
     toString (): string {
-      const headerRow: RowNode | undefined = rows.at(0);
+      const headerRow: RowNode | undefined = filteredRows.at(0);
 
       if (headerRow === undefined)
         return "";
 
       const borderRow: RowNode = tableRow();
-      const contentRows: RowNode[] = rows.slice(1);
+      const contentRows: RowNode[] = filteredRows.slice(1);
 
       for (const [ index, cell ] of headerRow.cells.entries()) {
-        const length: number | null = getCellLengthInRowIndex(rows, index);
+        const length: number | null = getCellLengthInRowIndex(filteredRows, index);
 
         if (length === null)
           continue;
 
-        updateCellLengthInRowIndex(rows, index, length);
+        updateCellLengthInRowIndex(filteredRows, index, length);
 
         const borderCell: CellNode = tableCell(
           getBorderCellValueByAlign(length, cell.align())
@@ -158,7 +162,8 @@ function table (
 export type {
   Align as TableAlign,
   CellNode as TableCellNode,
-  RowNode as TableRowNode
+  RowNode as TableRowNode,
+  CellNodeUpdateCallback as TableCellNodeUpdateCallback
 };
 export {
   tableCell,

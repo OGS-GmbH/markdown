@@ -7,13 +7,15 @@ type Type = "ordered" | "unordered";
 
 function list (
   type: Type,
-  ...nodes: Array<Node | string>
+  ...nodes: Array<Node | string | null>
 ): Node {
+  const filteredNodes: Array<Node | string> = nodes.filter((node: Node | string | null): node is Node | string => node !== null);
+
   return {
     toString (): string {
       let data: string = "";
 
-      for (const [ index, value ] of nodes.entries()) {
+      for (const [ index, value ] of filteredNodes.entries()) {
         const leading: string | number = type === "ordered" ? index + 1 : LEADING_UNORDERED;
 
         data += `${ leading } ${ value.toString() }\n`;

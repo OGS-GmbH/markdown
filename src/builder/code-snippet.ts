@@ -2,11 +2,47 @@
 import type { Node } from "./builder";
 import { CHAINED_ATTRIBUTES_SEP, formatLineHighlight, LINE_HIGHLIGHT_PREFIX, LINE_HIGHLIGHT_SUFFIX, LINE_NUMBERS_ATTRIBUTE, type LineHighlight, type LineNumbers } from "./utils";
 
+/**
+ * Configuration options for a code-snippet element
+ *
+ * @since 1.0.0
+ * @author Simon Kovtyk
+ */
 type Options = {
+  /**
+   * Language of the code-snippet
+   *
+   * @since 1.0.0
+   * @author Simon Kovtyk
+   */
   language?: string;
+  /**
+   * Language of the code-snippet
+   *
+   * @since 1.0.0
+   * @author Simon Kovtyk
+   */
   lineNumbers?: LineNumbers;
+  /**
+   * Language of the code-snippet
+   *
+   * @since 1.0.0
+   * @author Simon Kovtyk
+   */
   isRelative?: boolean;
+  /**
+   * Language of the code-snippet
+   *
+   * @since 1.0.0
+   * @author Simon Kovtyk
+   */
   section?: string;
+  /**
+   * Language of the code-snippet
+   *
+   * @since 1.0.0
+   * @author Simon Kovtyk
+   */
   lineHighlights?: LineHighlight[];
 };
 

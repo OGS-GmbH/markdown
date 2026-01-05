@@ -15,6 +15,12 @@ export * from "./builder/link";
 export * from "./builder/list";
 export * from "./builder/paragraph";
 export * from "./builder/quote";
+export * from "./builder/rule";
 export * from "./builder/table-of-contents";
 export * from "./builder/table";
 export * from "./builder/task";
+export {
+  type LineHighlightRange,
+  type LineHighlight,
+  type LineNumbers
+} from "./builder/utils";

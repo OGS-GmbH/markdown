@@ -36,7 +36,8 @@ export default defineConfig(
       "dist",
       "CHANGELOG.md",
       "CODE_OF_CONDUCT.md",
-      "README.md"
+      "README.md",
+      ".vitepress/.vitepress/cache"
     ]
   },
   {
@@ -45,7 +46,12 @@ export default defineConfig(
       parser: tseslint.parser,
       globals: globals.browser,
       parserOptions: {
-        projectService: true,
+        projectService: {
+          allowDefaultProject: [
+            ".vitepress/.vitepress/*",
+            ".vitepress/.vitepress/theme/*"
+          ]
+        },
         tsconfigRootDir: import.meta.dirname
       }
     },
