@@ -1,5 +1,6 @@
 /* eslint-disable @tseslint/no-shadow */
 import type { Node } from "./builder";
+import { linebreak } from "./linebreak";
 
 type Align = "left" | "right" | "center";
 
@@ -13,11 +14,20 @@ type CellNode = Node & {
 type CellNodeUpdateCallback = (value: Node | string) => Node | string;
 
 function tableCell (value: Node | string, align?: Align): CellNode {
-  let currentValue: Node | string = value;
+  let currentValue: Node | string = value.toString()
+    .split("\n")
+    .map((line: string): string => line.trim())
+    .join(
+      linebreak("html").toString()
+    );
   let valueStr: string | undefined;
 
   function getValueStr (): string {
-    valueStr ??= currentValue.toString();
+    valueStr ??= currentValue.toString()
+      .split("\n")
+      .join(
+        linebreak("html").toString()
+      );
 
     return valueStr;
   }
@@ -41,7 +51,7 @@ function tableCell (value: Node | string, align?: Align): CellNode {
       clearValueStr();
     },
     updateValue (callback: CellNodeUpdateCallback): void {
-      currentValue = callback(value);
+      currentValue = callback(currentValue);
       clearValueStr();
     }
   };
@@ -56,9 +66,9 @@ type RowNode = Node & {
 const TABLE_SEP: string = "|";
 
 function tableRow (
-  ...nodes: Array<CellNode | null>
+  ...nodes: Array<CellNode | null | undefined>
 ): RowNode {
-  const filteredNodes: CellNode[] = nodes.filter((node: CellNode | null): node is CellNode => node !== null);
+  const filteredNodes: CellNode[] = nodes.filter((node: CellNode | null | undefined): node is CellNode => node !== null && node !== undefined);
 
   return {
     toString (): string {
@@ -121,9 +131,9 @@ function getBorderCellValueByAlign (length: number, align: Align): string {
 }
 
 function table (
-  ...rows: Array<RowNode | null>
+  ...rows: Array<RowNode | null | undefined>
 ): Node {
-  const filteredRows: RowNode[] = rows.filter((row: RowNode | null): row is RowNode => row !== null);
+  const filteredRows: RowNode[] = rows.filter((row: RowNode | null | undefined): row is RowNode => row !== null && row !== undefined);
 
   return {
     toString (): string {

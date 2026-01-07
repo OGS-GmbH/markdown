@@ -7,9 +7,9 @@ type Type = "ordered" | "unordered";
 
 function list (
   type: Type,
-  ...nodes: Array<Node | string | null>
+  ...nodes: Array<Node | string | null | undefined>
 ): Node {
-  const filteredNodes: Array<Node | string> = nodes.filter((node: Node | string | null): node is Node | string => node !== null);
+  const filteredNodes: Array<Node | string> = nodes.filter((node: Node | string | null | undefined): node is Node | string => node !== null && node !== undefined);
 
   return {
     toString (): string {

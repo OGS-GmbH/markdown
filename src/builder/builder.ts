@@ -40,16 +40,16 @@ type DefineReturn = {
  * @since 1.0.0
  * @author Simon Kovtyk
  */
-function define (...nodes: Array<Node | null>): DefineReturn {
+function define (...nodes: Array<Node | null | undefined>): DefineReturn {
   return {
     toString (): string {
       let value: string = "";
 
       for (const node of nodes) {
-        if (node === null)
+        if (!node)
           continue;
 
-        value += node.toString();
+        value += `${ node.toString() }\n`;
       }
 
       return value;
