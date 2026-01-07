@@ -4,6 +4,7 @@ import { CHAINED_ATTRIBUTES_SEP, formatLineHighlight, LINE_HIGHLIGHT_PREFIX, LIN
 
 /**
  * Configuration options for a code-snippet element
+ * @category Builder types
  *
  * @since 1.0.0
  * @author Simon Kovtyk
@@ -119,7 +120,29 @@ function formatAttributes (
   return `${ LINE_HIGHLIGHT_PREFIX }${ values.join(" ") }${ LINE_HIGHLIGHT_SUFFIX }`;
 }
 
-
+/**
+ * Builder-element for a code-snippet
+ * @param path - Path of the code-snippet
+ * @param options - Additional options for this element
+ * @returns A markdown node
+ * @category Builder
+ * @example
+ * ```ts
+ * import { define, codeSnippet } from "@ogs-gmbh/markdown";
+ *
+ * const markdown = define(
+ *   codeSnippet("path/to/code-snippet.ts", { language: "ts" })
+ * );
+ *
+ * console.assert(
+ *   markdown.toString()
+ * );
+ * ```
+ *
+ * @see https://vitepress.dev/guide/markdown#import-code-snippets
+ * @since 1.0.0
+ * @author Simon Kovtyk
+ */
 function codeSnippet (
   path: string,
   options?: Options

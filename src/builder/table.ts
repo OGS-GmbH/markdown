@@ -2,17 +2,73 @@
 import type { Node } from "./builder";
 import { linebreak } from "./linebreak";
 
+/**
+ * Alignment of a table cell
+ * @category Builder types
+ *
+ * @since 1.0.0
+ * @author Simon Kovtyk
+ */
 type Align = "left" | "right" | "center";
 
+/**
+ * Cell of a table
+ * @category Builder types
+ *
+ * @author Simon Kovtyk
+ * @since 1.0.0
+ */
 type CellNode = Node & {
+  /**
+   * Length of this cell's content
+   *
+   * @author Simon Kovtyk
+   * @since 1.0.0
+   */
   length (): number;
+  /**
+   * Alignment of this cell
+   *
+   * @author Simon Kovtyk
+   * @since 1.0.0
+   */
   align (): Align;
+  /**
+   * Set value of this cell
+   *
+   * @author Simon Kovtyk
+   * @since 1.0.0
+   */
   setValue (value: Node | string): void;
+  /**
+   * Update value of this cell
+   *
+   * @author Simon Kovtyk
+   * @since 1.0.0
+   */
   updateValue (callback: CellNodeUpdateCallback): void;
 };
 
+/**
+ * Callback to update a cell's value
+ * @category Builder types
+ *
+ * @since 1.0.0
+ * @author Simon Kovtyk
+ */
 type CellNodeUpdateCallback = (value: Node | string) => Node | string;
 
+/**
+ * Builder-element for a table cell
+ * @param value - Content of this cell
+ * @param align - Alignment of this cell
+ * @returns A markdown table cell node
+ * @category Builder
+ *
+ * @see https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/organizing-information-with-tables
+ * @since 1.0.0
+ * @author Simon Kovtyk
+ */
 function tableCell (value: Node | string, align?: Align): CellNode {
   let currentValue: Node | string = value.toString()
     .split("\n")
@@ -57,14 +113,49 @@ function tableCell (value: Node | string, align?: Align): CellNode {
   };
 }
 
+/**
+ * Builder-element for a table row
+ * @category Builder types
+ *
+ * @since 1.0.0
+ * @author Simon Kovtyk
+ */
 type RowNode = Node & {
+  /**
+   * Cells of this row
+   *
+   * @since 1.0.0
+   * @author Simon Kovtyk
+   */
   cells: CellNode[];
+  /**
+   * Get cell at specific index
+   *
+   * @since 1.0.0
+   * @author Simon Kovtyk
+   */
   cellAt (index: number): CellNode | undefined;
+  /**
+   * Add a cell to this row
+   *
+   * @since 1.0.0
+   * @author Simon Kovtyk
+   */
   addCell (node: CellNode): void;
 };
 
 const TABLE_SEP: string = "|";
 
+/**
+ * Builder-element for a table row
+ * @param nodes - Cells of this row
+ * @returns A markdown table row node
+ * @category Builder
+ *
+ * @see https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/organizing-information-with-tables
+ * @since 1.0.0
+ * @author Simon Kovtyk
+ */
 function tableRow (
   ...nodes: Array<CellNode | null | undefined>
 ): RowNode {
@@ -130,6 +221,37 @@ function getBorderCellValueByAlign (length: number, align: Align): string {
   }
 }
 
+/**
+ * Builder-element for a table
+ * @param rows - Rows of this table
+ * @returns A markdown node
+ * @category Builder
+ * @example
+ * ```ts
+ * import { define, table, tableRow, tableCell } from "@ogs-gmbh/markdown";
+ *
+ * const markdown = define(
+ *   table(
+ *     tableRow(
+ *       tableCell("Name", "left"),
+ *       tableCell("Price", "left"),
+ *     ),
+ *     tableRow(
+ *       tableCell("Smartphone", "left"),
+ *       tableCell("1.300,00 €", "left"),
+ *     )
+ *   )
+ * );
+ *
+ * console.assert(
+ *   markdown.toString()
+ * );
+ * ```
+ *
+ * @see https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/organizing-information-with-tables
+ * @since 1.0.0
+ * @author Simon Kovtyk
+ */
 function table (
   ...rows: Array<RowNode | null | undefined>
 ): Node {

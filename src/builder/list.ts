@@ -3,8 +3,38 @@ import type { Node } from "./builder.js";
 
 const LEADING_UNORDERED: string = "-";
 
+/**
+ * Type of list
+ * @category Builder types
+ *
+ * @since 1.0.0
+ * @author Simon Kovtyk
+ */
 type Type = "ordered" | "unordered";
 
+/**
+ * Builder-element for a list
+ * @param type - Type of list
+ * @param nodes - Items of the list
+ * @returns A markdown node
+ * @category Builder
+ * @example
+ * ```ts
+ * import { define, list } from "@ogs-gmbh/markdown";
+ *
+ * const markdown = define(
+ *   list("unordered", "Computer", "Remote control");
+ * );
+ *
+ * console.assert(
+ *   markdown.toString()
+ * );
+ * ```
+ *
+ * @see https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#lists
+ * @since 1.0.0
+ * @author Simon Kovtyk
+ */
 function list (
   type: Type,
   ...nodes: Array<Node | string | null | undefined>

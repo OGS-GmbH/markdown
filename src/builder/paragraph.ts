@@ -1,6 +1,13 @@
 /* eslint-disable @tseslint/no-shadow */
 import type { Node } from "./builder.js";
 
+/**
+ * Text styles for paragraph
+ * @category Builder types
+ *
+ * @since 1.0.0
+ * @author Simon Kovtyk
+ */
 type TextStyle =
   | "bold"
   | "boldAlt"
@@ -40,8 +47,38 @@ const TEXT_STYLE_TAG: Record<TextStyle, TextStyleTag | string> = {
   }
 };
 
+/**
+ * Options for paragraph
+ * @category Builder types
+ *
+ * @since 1.0.0
+ * @author Simon Kovtyk
+ */
 type Options = TextStyle[];
 
+/**
+ * Builder-element for a paragraph
+ * @param value - Content of this element
+ * @param options - Text styles for this paragraph
+ * @returns A markdown node
+ * @category Builder
+ * @example
+ * ```ts
+ * import { define, paragraph } from "@ogs-gmbh/markdown";
+ *
+ * const markdown = define(
+ *   paragraph("Some sentence", [ "bold", "italic" ])
+ * );
+ *
+ * console.assert(
+ *   markdown.toString()
+ * );
+ * ```
+ *
+ * @see https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#paragraphs
+ * @since 1.0.0
+ * @author Simon Kovtyk
+ */
 function paragraph (
   value: Node | string,
   options?: Options

@@ -35,4 +35,4 @@ We support all available elements in flavors:
 - ✅ markdown-it
 - ✅ Vitepress
 
-Check the [builder reference](). Each element is shipped with an example.
+Check the [reference](/reference). Each element is shipped with an example.
