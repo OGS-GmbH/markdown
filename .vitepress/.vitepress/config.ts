@@ -57,7 +57,7 @@ export default defineConfig({
   base: "/markdown/",
   srcDir: "../dist/typedoc",
   outDir: "../dist/docs",
-  titleTemplate: ":title - OGS stdx",
+  titleTemplate: ":title - OGS markdown",
   cleanUrls: true,
   appearance: "dark",
   markdown: {
