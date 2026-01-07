@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.1](https://github.com/OGS-GmbH/markdown/compare/v1.1.0...v1.1.1) (2026-01-07)
+
+
+### Bug Fixes
+
+* **docs:** add missing builder items ([bbafc60](https://github.com/OGS-GmbH/markdown/commit/bbafc60e12e2c611f6ead0e9596accde541cac45))
+
 ## [1.1.0](https://github.com/OGS-GmbH/markdown/compare/v1.0.0...v1.1.0) (2026-01-07)
 
 
