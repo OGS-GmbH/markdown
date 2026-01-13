@@ -2,11 +2,27 @@
 
 # Markdown
 
-*A lightweight and extensible npm library for parsing, transforming, and rendering Markdown with a deterministic and specification-oriented approach.* 
+*A lightweight and extensible npm library for transforming and building Markdown with a deterministic and specification-oriented approach.* 
 
 <a href="./LICENSE" target="_blank"><img src="https://img.shields.io/github/license/OGS-GmbH/markdown?color=0f434e&logo=hackthebox&logoColor=000000&labelColor=ffffff" /></a>
 <a href="https://github.com/OGS-GmbH/markdown/actions/workflows/main-deploy.yml" target="_blank"><img src="https://img.shields.io/github/actions/workflow/status/OGS-GmbH/markdown/main-deploy.yml?color=0f434e&logo=rocket&logoColor=000000&labelColor=ffffff" /></a>
 <a href="https://www.npmjs.com/package/@ogs-gmbh/markdown" target="_blank"><img src="https://img.shields.io/npm/v/%40ogs-gmbh%2Fmarkdown?color=0f434e&logo=npm&logoColor=000000&labelColor=ffffff" /></a>
+
+- **AST-Based Serialization**\
+  Converts Markdown into valid Markdown.
+
+- **Programmatic Builder API**\
+  Enables deterministic, type-safe construction of Markdown documents.
+
+- **Semantic-Preserving Transformations**  
+  Allows structural modifications without altering the intended meaning.
+
+- **Extensibility**\
+  Supports common Markdown extensions (e.g., tables, task lists).
+
+- **Deterministic Output**\
+  Ensures stable, reproducible Markdown generation independent of input formatting.
+
 
 ## Getting Started
 
@@ -17,12 +33,28 @@ To get a knowledge and reference, refer to the official documentation at [https:
 The MIT License (MIT) - Please have a look at the [LICENSE file](./LICENSE) for more details.
 
 ## Contributing
-
 Contributions are always welcome and greatly appreciated. Whether you want to report a bug, suggest a new feature, or improve the documentation, your input helps make the project better for everyone.
 
-If you're unsure where to start, check the open issues for guidance. Even small contributions, such as fixing typos or improving code readability, are valuable.
+Feel free to submit a pull request, issue or feature request.
 
-Feel free to submit a pull request or start a discussion — we're happy to collaborate!
+### Issues and Feature Requests
+Reporting an issue or creating a feature request is made by creating a new issue on this repository.
+
+You can create a [new issue or feature request here](../../issues/new/choose).
+
+### Pull Requests
+GitHub offers a solid guideline for contributing to open source projects through pull requests, covering key practices. These best practices provide a reliable starting point for making effective contributions.
+
+You can find the [guidelines here](https://docs.github.com/get-started/exploring-projects-on-github/contributing-to-a-project).
+
+### Code Of Conduct
+We are committed to keeping a welcoming, inclusive, and respectful community for everyone. To help us achieve this, we kindly ask that you adhere to our [Code of Conduct](./CODE_OF_CONDUCT.md).
+
+## Disclaimer
+
+All trademarks and registered trademarks mentioned are property of their respective owners and are used for identification purposes only. Use of these names does not imply endorsement or affiliation.
+
+This project is a trademark of OGS Gesellschaft für Datenverarbeitung und Systemberatung mbH. The License does not grant rights to use the trademark without permission.
 
 ---
 
