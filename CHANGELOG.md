@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.1.2](https://github.com/OGS-GmbH/markdown/compare/v1.1.1...v1.1.2) (2026-01-13)
+
+
+### Bug Fixes
+
+* **readme:** add features ([3cce2c8](https://github.com/OGS-GmbH/markdown/commit/3cce2c8a400522ff67bc92b9e6a5db23e508b0ef))
+* **readme:** add instructions ([9495840](https://github.com/OGS-GmbH/markdown/commit/94958407b0f3dcacd6adab675e761c41ad971067))
+
 ## [1.1.1](https://github.com/OGS-GmbH/markdown/compare/v1.1.0...v1.1.1) (2026-01-07)
 
 
