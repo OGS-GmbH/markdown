@@ -23,10 +23,55 @@
 - **Deterministic Output**\
   Ensures stable, reproducible Markdown generation independent of input formatting.
 
-
 ## Getting Started
 
-To get a knowledge and reference, refer to the official documentation at [https://ogs-gmbh.github.io/markdown](https://ogs-gmbh.github.io/markdown).
+> [!IMPORTANT]
+> We're offering an extensive API-Reference covered with in-depth usage examples of this project.
+
+To get a starting point, simply refer to our documentation at [ogs-gmbh.github.io/markdown](https://ogs-gmbh.github.io/markdown).
+
+## Prerequisites
+
+- Node.js version 18 or higher.
+- A package manager: e.g. npm, pnpm, ...
+
+## Installation
+
+Using npm:
+```sh
+$ npm install @ogs-gmbh/markdown
+```
+
+<details>
+  <summary>Using a different package managers?</summary>
+  <br/>
+  
+  Using yarn:
+  ```sh
+  $ pnpm add @ogs-gmbh/markdown
+  ```
+  
+  Using pnpm:
+  ```sh
+  $ pnpm add @ogs-gmbh/markdown
+  ```
+  
+  Using bun:
+  ```sh
+  $ bun add @ogs-gmbh/markdown
+  ```
+
+</details>
+
+## Building
+
+Markdown can now be easily build. But make sure to import it first with your Markdown elements.
+
+```ts
+import { define } from "@ogs-gmbh/markdown";
+```
+
+Now you can start adding Markdown elements. Each element has an example. Just check it out at [ogs-gmbh.github.io/markdown/reference](https://ogs-gmbh.github.io/markdown/reference/).
 
 ## License
 
