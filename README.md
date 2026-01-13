@@ -23,6 +23,14 @@
 - **Deterministic Output**\
   Ensures stable, reproducible Markdown generation independent of input formatting.
 
+## Flavors
+
+We support all available elements in flavors:
+
+- GitHub
+- markdown-it
+- Vitepress
+
 ## Getting Started
 
 > [!IMPORTANT]

@@ -1,5 +1,32 @@
 # Gettings started
 
+## Introduction
+
+### Features
+
+- **AST-Based Serialization**\
+  Converts Markdown into valid Markdown.
+
+- **Programmatic Builder API**\
+  Enables deterministic, type-safe construction of Markdown documents.
+
+- **Semantic-Preserving Transformations**  
+  Allows structural modifications without altering the intended meaning.
+
+- **Extensibility**\
+  Supports common Markdown extensions (e.g., tables, task lists).
+
+- **Deterministic Output**\
+  Ensures stable, reproducible Markdown generation independent of input formatting.
+
+### Flavors
+
+We support all available elements in flavors:
+
+- GitHub
+- markdown-it
+- Vitepress
+
 ## Installation
 
 ### Prerequisites
@@ -10,29 +37,29 @@
 ::: code-group
 
 ```sh [npm]
-$ npm add -D @ogs-gmbh/markdown
+$ npm install @ogs-gmbh/markdown
 ```
 
 ```sh [pnpm]
-$ pnpm add -D @ogs-gmbh/markdown
+$ pnpm add @ogs-gmbh/markdown
 ```
 
 ```sh [yarn]
-$ yarn add -D @ogs-gmbh/markdown
+$ yarn add @ogs-gmbh/markdown
 ```
 
 ```sh [bun]
-$ bun add -D @ogs-gmbh/markdown
+$ bun add @ogs-gmbh/markdown
 ```
 
 :::
 
-### Usage
+## Building
 
-We support all available elements in flavors:
+Markdown can now be easily build. But make sure to import it first with your Markdown elements.
 
-- ✅ GitHub
-- ✅ markdown-it
-- ✅ Vitepress
+```ts [example.ts]
+import { define } from "@ogs-gmbh/markdown";
+```
 
-Check the [reference](/reference). Each element is shipped with an example.
+Now you can start adding Markdown elements. Each element has an example. Just check it out at [reference](/reference/).

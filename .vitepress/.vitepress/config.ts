@@ -8,7 +8,11 @@ export default defineConfig({
   ignoreDeadLinks: true,
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
-    logo: "https://raw.githubusercontent.com/OGS-GmbH/.github/refs/heads/main/docs/logo-white.svg",
+    logo: {
+      light: "https://raw.githubusercontent.com/OGS-GmbH/.github/refs/tags/v1.0.0/docs/assets/logo/dark.svg",
+      dark: "https://raw.githubusercontent.com/OGS-GmbH/.github/refs/tags/v1.0.0/docs/assets/logo/light.svg",
+      alt: "OGS GmbH Logo"
+    },
     nav: [
       { text: "Guide", link: "/guide" },
       { text: "Reference", link: "/reference" },
@@ -45,6 +49,7 @@ export default defineConfig({
       {
         text: "Legal",
         items: [
+          { text: "Disclaimer", link: "/legal/disclaimer" },
           { text: "MIT License", link: "/legal/license" },
           { text: "Copyright © 2025 — present OGS GmbH", link: "https://www.ogs.de/en/" }
         ]
