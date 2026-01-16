@@ -30,7 +30,7 @@
   "interfacePropertiesFormat": "table",
   "classPropertiesFormat": "table",
   "enumMembersFormat": "table",
-  "router": "kind",
+  "router": "category",
   "navigation": {
     "includeCategories": true,
     "includeGroups": true,

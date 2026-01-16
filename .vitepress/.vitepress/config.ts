@@ -1,5 +1,6 @@
 import { defineConfig } from 'vitepress';
 import { groupIconMdPlugin, groupIconVitePlugin } from "vitepress-plugin-group-icons";
+import { sidebarPlugin } from "@ogs-gmbh/vitepress-plugin-sidebar";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -33,12 +34,10 @@ export default defineConfig({
           { text: "Getting started", link: "/guide/" }
         ]
       },
-      {
-        text: "Reference",
-        items: [
-          { text: "Overview", link: "/reference/" }
-        ]
-      },
+      sidebarPlugin({
+        path: "./dist/vitepress-src/reference",
+        normalizeDirNames: true
+      }),
       {
         text: "Other",
         items: [
@@ -57,14 +56,18 @@ export default defineConfig({
     ]
   },
   head: [
-    [ "link", { rel: "icon", href: "https://www.ogs.de/favicon.ico" } ]
+    [ "link", { rel: "shortcut icon", href: "https://raw.githubusercontent.com/OGS-GmbH/.github/refs/tags/v1.1.0/docs/assets/favicon/favicon.ico" } ],
+    [ "link", { rel: "apple-touch-icon", href: "https://raw.githubusercontent.com/OGS-GmbH/.github/refs/tags/v1.1.0/docs/assets/favicon/apple-touch-icon.png" } ],
+    [ "link", { rel: "manifest", href: "site.webmanifest" } ],
+    [ "link", { rel: "icon", type: "image/svg+xml", href: "https://raw.githubusercontent.com/OGS-GmbH/.github/refs/tags/v1.1.0/docs/assets/favicon/favicon.svg" } ],
+    [ "link", { rel: "icon", type: "image/png", href: "https://raw.githubusercontent.com/OGS-GmbH/.github/refs/tags/v1.1.0/docs/assets/favicon/favicon-96x96.png", sizes: "96x96" } ]
   ],
   base: "/markdown/",
-  srcDir: "../dist/typedoc",
+  srcDir: "../dist/vitepress-src",
   outDir: "../dist/docs",
   titleTemplate: ":title - OGS markdown",
   cleanUrls: true,
-  appearance: "dark",
+  appearance: true,
   markdown: {
     // eslint-disable-next-line @tseslint/typedef
     config (md) {

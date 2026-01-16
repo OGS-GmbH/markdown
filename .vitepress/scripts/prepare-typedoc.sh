@@ -1,4 +1,4 @@
-mkdir ./dist/typedoc/reference
+mkdir -p ./dist/typedoc/reference
 mv ./dist/typedoc/* ./dist/typedoc/reference
 mv ./dist/typedoc/index.md ./dist/typedoc/reference/index.md
 
