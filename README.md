@@ -4,9 +4,11 @@
 
 *A lightweight and extensible npm library for transforming and building Markdown with a deterministic and specification-oriented approach.* 
 
-<a href="./LICENSE" target="_blank"><img src="https://img.shields.io/github/license/OGS-GmbH/markdown?color=0f434e&logo=hackthebox&logoColor=000000&labelColor=ffffff" /></a>
-<a href="https://github.com/OGS-GmbH/markdown/actions/workflows/main-deploy.yml" target="_blank"><img src="https://img.shields.io/github/actions/workflow/status/OGS-GmbH/markdown/main-deploy.yml?color=0f434e&logo=rocket&logoColor=000000&labelColor=ffffff" /></a>
-<a href="https://www.npmjs.com/package/@ogs-gmbh/markdown" target="_blank"><img src="https://img.shields.io/npm/v/%40ogs-gmbh%2Fmarkdown?color=0f434e&logo=npm&logoColor=000000&labelColor=ffffff" /></a>
+![Preview](./docs/preview.avif)
+
+<a href="./LICENSE" target="_blank"><img alt="license badge" src="https://img.shields.io/github/license/OGS-GmbH/markdown?color=0f434e&logo=hackthebox&logoColor=000000&labelColor=ffffff" /></a>
+<a href="https://github.com/OGS-GmbH/markdown/actions/workflows/main-deploy.yml" target="_blank"><img alt="workflow badge" src="https://img.shields.io/github/actions/workflow/status/OGS-GmbH/markdown/main-deploy.yml?color=0f434e&logo=rocket&logoColor=000000&labelColor=ffffff" /></a>
+<a href="https://www.npmjs.com/package/@ogs-gmbh/markdown" target="_blank"><img alt="npm badge" src="https://img.shields.io/npm/v/%40ogs-gmbh%2Fmarkdown?color=0f434e&logo=npm&logoColor=000000&labelColor=ffffff" /></a>
 
 - **AST-Based Serialization**\
   Converts Markdown into valid Markdown.
@@ -14,16 +16,13 @@
 - **Programmatic Builder API**\
   Enables deterministic, type-safe construction of Markdown documents.
 
-- **Semantic-Preserving Transformations**  
+- **Semantic-Preserving Transformations**
   Allows structural modifications without altering the intended meaning.
 
 - **Extensibility**\
   Supports common Markdown extensions (e.g., tables, task lists).
 
-- **Deterministic Output**\
-  Ensures stable, reproducible Markdown generation independent of input formatting.
-
-## Flavors
+## Supported Flavors
 
 We support all available elements in flavors:
 
