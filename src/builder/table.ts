@@ -282,11 +282,16 @@ function table (
         borderRow.addCell(borderCell);
       }
 
-      const content: string = contentRows.map((row: RowNode) => row.toString())
-      /* eslint-disable-next-line no-return-assign, no-param-reassign, no-useless-assignment */
-        .reduce((acc: string, curr: string): string => acc += `\n${ curr }`);
+      let markdown: string = `${ headerRow.toString() }\n${ borderRow.toString() }`;
 
-      return `${ headerRow.toString() }\n${ borderRow.toString() }\n${ content }`;
+      if (contentRows.length !== 0) {
+        markdown += "\n";
+        markdown += contentRows.map((row: RowNode) => row.toString())
+          /* eslint-disable-next-line no-return-assign, no-param-reassign, no-useless-assignment */
+          .reduce((acc: string, curr: string): string => acc += `\n${ curr }`);
+      }
+
+      return markdown;
     }
   };
 }

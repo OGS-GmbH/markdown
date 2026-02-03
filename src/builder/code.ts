@@ -158,7 +158,7 @@ function code (
       const attributesStr: string = attributes.length === 0 ? "" : attributes.join(" ");
       const tag: string = TAG.repeat(3);
 
-      return `${ tag }${ attributesStr }\n${ value.toString() }${ tag }`;
+      return `${ tag }${ attributesStr }\n${ value.toString() }\n${ tag }`;
     }
   };
 }
