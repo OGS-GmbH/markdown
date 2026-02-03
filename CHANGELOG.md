@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.1.4](https://github.com/OGS-GmbH/markdown/compare/v1.1.3...v1.1.4) (2026-02-03)
+
+
+### Bug Fixes
+
+* **docs:** add standardized layout ([6aebef4](https://github.com/OGS-GmbH/markdown/commit/6aebef4325af35fe0431acd6101b0293a2404e3e))
+* **table & code:** add missing linebreaks and remove unesscessary node rendering ([19c0d6b](https://github.com/OGS-GmbH/markdown/commit/19c0d6b22931bdeabbd84b04a7ae8f303192d41f))
+
 ## [1.1.3](https://github.com/OGS-GmbH/markdown/compare/v1.1.2...v1.1.3) (2026-01-13)
 
 
