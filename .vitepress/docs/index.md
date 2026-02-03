@@ -1,5 +1,6 @@
 ---
 layout: home
+isHome: true
 
 hero:
   text: Markdown Library
@@ -16,14 +17,17 @@ hero:
       link: https://github.com/OGS-GmbH/markdown
 
 features:
-  - icon: <svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="48px" fill="#FFFFFF"><path d="M480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-60q142 0 241-99t99-241q0-142-99-241t-241-99q-142 0-241 99t-99 241q0 142 99 241t241 99Zm0-340Zm-22 220 204-204-42-42-162 162-86-86-42 42 128 128Z"/></svg>
-    title: Multiple flavors at once
-    details: Heavy support for GitHub and markdown-it flavor, as well as many more.
-  - icon: <svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="48px" fill="#FFFFFF"><path d="M440-183v-274L200-596v274l240 139Zm80 0 240-139v-274L520-457v274Zm-80 92L160-252q-19-11-29.5-29T120-321v-318q0-22 10.5-40t29.5-29l280-161q19-11 40-11t40 11l280 161q19 11 29.5 29t10.5 40v318q0 22-10.5 40T800-252L520-91q-19 11-40 11t-40-11Zm200-528 77-44-237-137-78 45 238 136Zm-160 93 78-45-237-137-78 45 237 137Z"/></svg>
-    title: Batteries included
-    details: Type-aware Markdown building without the hassle.
-  - icon: <svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="48px" fill="#FFFFFF"><path d="m233-120 65-281L80-590l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Z"/></svg>
-    title: Zero Dependencies
-    details: Lightweight and self-contained with no external dependencies.  
+  - icon: <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"><rect width="6" height="6" x="16" y="16" rx="1"/><rect width="6" height="6" x="2" y="16" rx="1"/><rect width="6" height="6" x="9" y="2" rx="1"/><path d="M5 16v-3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3M12 12V8"/></svg>
+    title: AST-Based Serialization
+    details: Converts Markdown into valid Markdown.
+  - icon: <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.1-3.1c.33-.33.87-.23.99.21a6 6 0 0 1-8.26 7.06l-7.91 7.91a1 1 0 0 1-3-3l7.91-7.91a6 6 0 0 1 7.06-8.26c.44.12.54.66.22.98z"/></svg>
+    title: Programmatic Builder API
+    details: Enables deterministic, type-safe construction of Markdown documents.
+  - icon: <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 7v11a1 1 0 0 0 1 1h11"/><path d="M5.293 18.707 11 13"/><circle cx="19" cy="19" r="2"/><circle cx="5" cy="5" r="2"/></svg>
+    title: Semantic-Preserving Transformations
+    details: Allows structural modifications without altering the intended meaning.
+  - icon: <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"><path d="M13 7 8.7 2.7a2.41 2.41 0 0 0-3.4 0L2.7 5.3a2.41 2.41 0 0 0 0 3.4L7 13M8 6l2-2M18 16l2-2M17 11l4.3 4.3a2.4 2.4 0 0 1 0 3.4l-2.6 2.6a2.4 2.4 0 0 1-3.4 0L11 17M21.17 6.81a1 1 0 0 0-3.98-3.98L3.84 16.16a2 2 0 0 0-.5.83l-1.32 4.36a.5.5 0 0 0 .62.62L7 20.66a2 2 0 0 0 .83-.5zM15 5l4 4"/></svg>
+    title: Extensibility
+    details: Supports various Markdown extensions (e.g. GFM, VitePress)
 ---
 

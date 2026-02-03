@@ -1,35 +1,11 @@
+---
+prev: false
+next: false
+---
+
 # Gettings started
 
-## Introduction
-
-### Features
-
-- **AST-Based Serialization**\
-  Converts Markdown into valid Markdown.
-
-- **Programmatic Builder API**\
-  Enables deterministic, type-safe construction of Markdown documents.
-
-- **Semantic-Preserving Transformations**  
-  Allows structural modifications without altering the intended meaning.
-
-- **Extensibility**\
-  Supports common Markdown extensions (e.g., tables, task lists).
-
-- **Deterministic Output**\
-  Ensures stable, reproducible Markdown generation independent of input formatting.
-
-### Flavors
-
-We support all available elements in flavors:
-
-- GitHub
-- markdown-it
-- Vitepress
-
 ## Installation
-
-### Prerequisites
 
 - Node.js version 18 or higher.
 - A package manager: e.g. npm, pnpm, ...
