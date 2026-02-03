@@ -4,7 +4,7 @@ isHome: true
 
 hero:
   text: Markdown Library
-  tagline: A lightweight and extensible npm library for parsing, transforming, and rendering Markdown with a deterministic and specification-oriented approach. 
+  tagline: A lightweight and extensible Markdown library for transforming and building Markdown with a deterministic and specification-oriented approach.
   actions:
     - theme: brand
       text: Get started

@@ -1,7 +1,7 @@
 {
   "name": "@ogs-gmbh/markdown",
   "version": "1.1.4",
-  "description": "A lightweight and extensible npm library for parsing, transforming, and rendering Markdown with a deterministic and specification-oriented approach. It is designed for reproducibility, performance, and seamless integration into modern JavaScript and TypeScript toolchains.",
+  "description": "A lightweight and extensible Markdown library for transforming and building Markdown with a deterministic and specification-oriented approach.",
   "keywords": [
     "markdown",
     "markdown-renderer",
@@ -17,7 +17,7 @@
     "lightweight",
     "extensible"
   ],
-  "homepage": "https://github.com/OGS-GmbH/markdown",
+  "homepage": "ogs-gmbh.github.io/markdown",
   "bugs": "https://github.com/OGS-GmbH/markdown/issues",
   "license": "MIT",
   "author": "OGS GmbH",
@@ -36,10 +36,7 @@
   },
   "main": "./public-api.mjs",
   "types": "./public-api.d.ts",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/OGS-GmbH/markdown"
-  },
+  "repository": "github:OGS-GmbH/markdown",
   "type": "module",
   "scripts": {
     "ci:build:main:production": "node .esbuild/build.mjs",
@@ -47,6 +44,7 @@
     "ci:docs:main:vitepress": "bash ./.vitepress/scripts/pre-vitepress.sh && vitepress build .vitepress",
     "ci:pr:commitlint:main:commitlint": "commitlint",
     "ci:pr:lint:main:eslint": "eslint .",
+    "commit": "commit",
     "prepare": "husky",
     "vitepress": "bash ./.vitepress/scripts/pre-vitepress.sh && vitepress dev .vitepress",
     "vitepress:preview": "vitepress preview .vitepress"
