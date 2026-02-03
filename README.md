@@ -2,7 +2,7 @@
 
 # Markdown
 
-*A lightweight and extensible npm library for transforming and building Markdown with a deterministic and specification-oriented approach.* 
+*A lightweight and extensible Markdown library for transforming and building Markdown with a deterministic and specification-oriented approach.* 
 
 ![Preview](./docs/preview.avif)
 
