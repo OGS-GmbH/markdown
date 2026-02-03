@@ -1,6 +1,6 @@
 {
   "name": "@ogs-gmbh/markdown",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "description": "A lightweight and extensible Markdown library for transforming and building Markdown with a deterministic and specification-oriented approach.",
   "keywords": [
     "markdown",

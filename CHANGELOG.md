@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.5](https://github.com/OGS-GmbH/markdown/compare/v1.1.4...v1.1.5) (2026-02-03)
+
+
+### Bug Fixes
+
+* **docs:** change metadata ([fb89d73](https://github.com/OGS-GmbH/markdown/commit/fb89d739f1c440bb78c5af09891468b374678df9))
+
 ## [1.1.4](https://github.com/OGS-GmbH/markdown/compare/v1.1.3...v1.1.4) (2026-02-03)
 
 
